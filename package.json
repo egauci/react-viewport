@@ -1,0 +1,25 @@
+{
+  "name": "@egauci/react-viewport",
+  "version": "0.1.0",
+  "description": "React component for viewport size and scroll pos",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egauci/react-viewport"
+  }
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/index.js --out-file ./index.js"
+  },
+  "author": "Ed G",
+  "license": "ISC",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
+  }
+}
