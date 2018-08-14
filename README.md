@@ -2,7 +2,6 @@ Usage
 
     npm install --save @egauci/react-viewport
 
-
 To use in a component:
 
     import ReactViewport from '@egauci/react-viewport';
@@ -10,16 +9,22 @@ To use in a component:
     const MyComponent = () => (
       <div>
         <p>Current Viewport Values:</p>
-        <ReactViewport render={viewport => (
-          <div>
-            Scroll: {viewport.scrollX}, {viewport.scrollY}<br />
-            Dimensions: {viewport.clientWidth}, {viewport.clientHeight}
-          </div>
-        )
-        } />
+        <ReactViewport>
+          {
+            viewport => (
+              <div>
+                Scroll: {viewport.scrollX}, {viewport.scrollY}<br />
+                Dimensions: {viewport.clientWidth}, {viewport.clientHeight}
+              </div>
+            )
+          }
+        </ReactViewport>
       </div>
     );
 
-ReactViewport has one prop, *render* which should be a function that receives a
-*viewport* object and returns a React element. The *viewport* object has several
-properties, the useful ones are shown in the example above.
+## Props:
+
+_milli_ - optional, defaults to 100. The window resize debounce period in milliseconds
+_render_ or _children_ - a function that receives the _viewport_ object and returns a React element.
+
+The _viewport_ object has several properties, the useful ones are shown in the example above.
