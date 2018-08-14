@@ -25,6 +25,7 @@ To use in a component:
 ## Props:
 
 _milli_ - optional, defaults to 100. The window resize debounce period in milliseconds
+
 _render_ or _children_ - a function that receives the _viewport_ object and returns a React element.
 
 The _viewport_ object has several properties, the useful ones are shown in the example above.
